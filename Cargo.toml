@@ -1,0 +1,7 @@
+[package]
+name = "crypto_pals"
+version = "0.1.0"
+authors = ["Aaron Power <aaron.power@softwaredesign.ie>"]
+
+[dependencies]
+rustc-serialize = "*"
