@@ -1,15 +1,13 @@
-use std::u32;
-
 pub fn distance(a: &[u8], b: &[u8]) -> usize {
     let mut distance:usize = 0;
 
     for (a, b) in a.iter().zip(b) {
-        if a != b {distance += weight( a ^ b ) as usize;}
+        distance += weight(a ^ b);
     }
     distance
 }
 
-pub fn weight(mut x: u8) -> u8 {
+pub fn weight(mut x: u8) -> usize {
     let mut count = 0;
 
     while x > 0 {
